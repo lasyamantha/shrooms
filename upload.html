@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mushroom Marketplace!</title>
+    <style>
+        body {
+            font-family: 'Luminari', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #35522f; /* Dark green background color */
+            color: #f4f4f4; /* Light text color */
+        }
+
+        header {
+            background-color: #2a3f1f; /* Dark green header color */
+            color: #f4f4f4;
+            text-align: center;
+            padding: 1em;
+            border-bottom: 3px solid #507d46; /* Light green border bottom */
+        }
+
+        nav {
+            background-color: #2a3f1f; /* Dark green navigation bar color */
+            color: #f4f4f4;
+            text-align: left;
+            padding: 1em;
+            border-bottom: 3px solid #507d46; /* Light green border bottom */
+        }
+
+        nav a {
+            color: #e0a64b; /* Gold navigation bar text color */
+            text-decoration: none;
+            margin: 0 1em;
+        }
+        .products {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding: 2em;
+        }
+
+        .product {
+            background-color: #507d46; /* Light green product color */
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 1em;
+            margin: 1em;
+            text-align: center;
+        }
+
+        .product img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+
+        .price {
+            font-weight: bold;
+            color: #e0a64b; /* Gold price color */
+        }
+
+        button {
+            background-color: #e0a64b; /* Gold button color */
+            color: #35522f; /* Dark green button text color */
+            padding: 0.5em 1em;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #b38037; /* Darker gold on hover */
+        }
+
+        footer {
+            background-color: #2a3f1f; /* Dark green footer color */
+            color: #f4f4f4;
+            text-align: center;
+            padding: 1em;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        nav {
+            background-color: #2a3f1f; /* Dark green navigation bar color */
+            color: #f4f4f4;
+            text-align: left;
+            padding: 1em;
+        }
+
+        nav a {
+            color: #e0a64b; /* Gold navigation bar text color */
+            text-decoration: none;
+            margin: 0 1em;
+        }
+
+        /* New styles for product upload page */
+        .upload-container {
+            text-align: left; /* Left-align the container */
+            padding: 2em;
+        }
+
+        .upload-form {
+            display: inline-block;
+            text-align: left;
+        }
+
+        .upload-form label {
+            display: block;
+            margin-bottom: 0.5em;
+            color: #f4f4f4; /* Light text color for labels */
+        }
+
+        .upload-form input[type="checkbox"] {
+            margin-right: 0.5em;
+        }
+
+        button:disabled {
+            background-color: #b3b3b3; /* Gray out the button when disabled */
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="index.html">Products</a>
+        <a href="upload.html">Upload</a>
+    </nav>
+
+    <header>
+        <h1>Mushroom Marketplace!</h1>
+        <p>Discover the freshest mushrooms for your culinary delight.</p>
+    </header>
+
+    <!-- Product Upload Page -->
+    <section class="upload-container">
+        <h2>Upload Your Offerings</h2>
+        <div class="upload-form">
+            <form action="#" method="post" enctype="multipart/form-data">
+                <label for="mushroomImage">Mushroom Image:</label>
+                <input type="file" id="mushroomImage" name="mushroomImage" accept="image/*" required>
+
+                <label for="mushroomName">Mushroom Name:</label>
+                <input type="text" id="mushroomName" name="mushroomName" required>
+
+                <label for="mushroomDescription">Description:</label>
+                <textarea id="mushroomDescription" name="mushroomDescription" required></textarea>
+
+                <label for="mushroomPrice">Price:</label>
+                <input type="number" id="mushroomPrice" name="mushroomPrice" step="0.01" required>
+                
+                <label>
+                    <input type="checkbox" name="safetyCheckbox" id="safetyCheckbox" onchange="toggleUploadButton()" required> <a href="https://i.pinimg.com/originals/38/44/f3/3844f3b903dbece2aa9ccfc20a4cfc72.png" target="_blank" style="color: #aecda7;">I ensure that my offerings are safe.</a>
+                </label>
+                    
+
+                <button type="submit" id="uploadButton" disabled>Upload</button>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        function toggleUploadButton() {
+            var checkbox = document.getElementById('safetyCheckbox');
+            var uploadButton = document.getElementById('uploadButton');
+
+            uploadButton.disabled = !checkbox.checked;
+        }
+
+        function validateForm() {
+            var checkbox = document.getElementById('safetyCheckbox');
+            
+            if (!checkbox.checked) {
+                alert("Please ensure that your offerings are safe by checking the checkbox.");
+                return false;
+            }
+
+            // Additional validation logic can be added here if needed
+
+            return true;
+        }
+    </script>
+
+</body>
+</html>

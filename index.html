@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mushroom Marketplace!</title>
+    <style>
+        body {
+            font-family: 'Luminari', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #35522f; /* Dark green background color */
+            color: #f4f4f4; /* Light text color */
+            body {
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+}
+        }
+
+        header {
+            background-color: #2a3f1f; /* Dark green header color */
+            color: #f4f4f4;
+            text-align: center;
+            padding: 1em;
+            border-bottom: 3px solid #507d46; /* Light green border bottom */
+        }
+
+        nav {
+            background-color: #2a3f1f; /* Dark green navigation bar color */
+            color: #f4f4f4;
+            text-align: left;
+            padding: 1em;
+            border-bottom: 3px solid #507d46; /* Light green border bottom */
+        }
+
+        nav a {
+            color: #e0a64b; /* Gold navigation bar text color */
+            text-decoration: none;
+            margin: 0 1em;
+        }
+
+        .products {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding: 2em;
+        }
+
+        .product {
+            background-color: #507d46; /* Light green product color */
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 1em;
+            margin: 1em;
+            text-align: center;
+        }
+
+        .product img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+
+        .price {
+            font-weight: bold;
+            color: #e0a64b; /* Gold price color */
+        }
+
+        button {
+            background-color: #e0a64b; /* Gold button color */
+            color: #35522f; /* Dark green button text color */
+            padding: 0.5em 1em;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #b38037; /* Darker gold on hover */
+        }
+
+        footer {
+            background-color: #2a3f1f; /* Dark green footer color */
+            color: #f4f4f4;
+            text-align: center;
+            padding: 1em;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        nav {
+            background-color: #2a3f1f; /* Dark green navigation bar color */
+            color: #f4f4f4;
+            text-align: left;
+            padding: 1em;
+        }
+
+        nav a {
+            color: #e0a64b; /* Gold navigation bar text color */
+            text-decoration: none;
+            margin: 0 1em;
+        }
+
+        /* New styles for product upload page */
+        .upload-container {
+            text-align: center;
+            padding: 2em;
+        }
+
+        .upload-form {
+            display: inline-block;
+            text-align: left;
+        }
+
+        .upload-form label {
+            display: block;
+            margin-bottom: 0.5em;
+            color: #f4f4f4; /* Light text color for labels */
+        }
+
+        .upload-form input[type="checkbox"] {
+            margin-right: 0.5em;
+        }
+
+        button:disabled {
+            background-color: #b3b3b3; /* Gray out the button when disabled */
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="index.html">Products</a>
+        <a href="upload.html">Upload</a>
+    </nav>
+
+    <header>
+        <h1>Mushroom Marketplace!</h1>
+        <p>Discover the freshest mushrooms for your culinary delight.</p>
+    </header>
+
+    <section class="products">
+        <article class="product">
+            <img src="https://s.wsj.net/public/resources/images/BN-JF117_0707RE_GR_20150702112606.jpg" alt="Mushroom 1" width="200" height="200">
+            <h2>Chanterelle</h2>
+            <p>Delicious and earthy, perfect for sautéing.</p>
+            <p class="price">$9.99</p>
+            <button>Add to Cart</button>
+        </article>
+
+        <article class="product">
+            <img src="https://sakura.co/wp-content/uploads/2023/08/shiitake-mushrooms-thumbnail.png" alt="Mushroom 2" width="200" height="200">
+            <h2>Shiitake</h2>
+            <p>A savory mushroom with a meaty texture.</p>
+            <p class="price">$12.99</p>
+            <button>Add to Cart</button>
+        </article>
+
+        <!-- Add more product articles as needed -->
+    </section>
+
+</body>
+</html>
